@@ -1,0 +1,74 @@
+# Dashboard YAML
+# Reference documentation: https://docs.rilldata.com/reference/project-files/dashboards
+# This file was generated using AI.
+
+type: metrics_view
+title: Sales by App Dashboard
+model: sales
+timeseries: date
+default_theme: theme
+dimensions:
+  - label: Parent App
+    column: parent_app
+    description: ""
+measures:
+  - name: total_revenue_usd
+    label: Total Revenue (USD)
+    expression: SUM(revenue_usd)
+    description: The total revenue in USD generated from sales.
+    format_preset: currency_usd
+    valid_percent_of_total: true
+  - name: average_revenue_usd
+    label: Average Revenue (USD)
+    expression: AVG(revenue_usd)
+    description: The average revenue in USD generated from sales.
+    format_preset: currency_usd
+    valid_percent_of_total: false
+  - name: total_sales
+    label: Total Sales
+    expression: COUNT(*)
+    description: The total number of sales transactions.
+    format_preset: humanize
+    valid_percent_of_total: true
+  - name: min_revenue_usd
+    label: Minimum Revenue (USD)
+    expression: MIN(revenue_usd)
+    description: The minimum revenue in USD generated from a single sale.
+    format_preset: currency_usd
+    valid_percent_of_total: false
+  - name: max_revenue_usd
+    label: Maximum Revenue (USD)
+    expression: MAX(revenue_usd)
+    description: The maximum revenue in USD generated from a single sale.
+    format_preset: currency_usd
+    valid_percent_of_total: false
+available_time_zones:
+  - America/Los_Angeles
+  - America/Chicago
+  - America/New_York
+  - Europe/London
+  - Europe/Paris
+  - Asia/Jerusalem
+  - Europe/Moscow
+  - Asia/Kolkata
+  - Asia/Shanghai
+  - Asia/Tokyo
+  - Australia/Sydney
+available_time_ranges:
+  - PT6H
+  - PT24H
+  - P7D
+  - P14D
+  - P4W
+  - P3M
+  - P12M
+  - rill-TD
+  - rill-WTD
+  - rill-MTD
+  - rill-QTD
+  - rill-YTD
+  - rill-PDC
+  - rill-PWC
+  - rill-PMC
+  - rill-PQC
+  - rill-PYC

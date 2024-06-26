@@ -1,0 +1,16 @@
+compiler: rill-beta
+name: Partner-Filtered Dashboards Demo
+# sources/mappings.yaml
+# type: local_file
+# path: data/mappings.csv
+mock_users:
+  - email: janet@salesforce.com
+  - email: mary@dropbox.com
+  - email: ramesh@shopify.com
+    admin: true
+  - email: jack@myintercom.com
+  - email: paarth@zoom.com
+    admin: true
+  - email: gary@wix.com
+  - email: beth@canva.com
+  - email: chloe@airtable.com
