@@ -1,1 +1,1 @@
-A quick demo to showcase dashboard security policies.
+A modified example of rill-partner-filtered dashboards with sales dashboard.
